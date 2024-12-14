@@ -1,0 +1,22 @@
+---
+import FeatureCard from './features/FeatureCard.astro';
+import SectionHeading from './ui/SectionHeading.astro';
+import { FEATURES } from '../utils/constants';
+import { icons } from '../utils/icons';
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <SectionHeading text="Why Choose Grupy?" />
+    <div class="grid md:grid-cols-3 gap-12">
+      {FEATURES.map(feature => (
+        <FeatureCard
+          title={feature.title}
+          description={feature.description}
+          icon={icons[feature.icon]}
+          delay={feature.delay}
+        />
+      ))}
+    </div>
+  </div>
+</section>

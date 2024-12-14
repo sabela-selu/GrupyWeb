@@ -1,0 +1,16 @@
+---
+import StepCard from './how-it-works/StepCard.astro';
+import SectionHeading from './ui/SectionHeading.astro';
+import { STEPS } from '../utils/constants';
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <SectionHeading text="How It Works" />
+    <div class="grid md:grid-cols-4 gap-8">
+      {STEPS.map(step => (
+        <StepCard {...step} />
+      ))}
+    </div>
+  </div>
+</section>

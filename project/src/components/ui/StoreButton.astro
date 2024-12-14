@@ -1,0 +1,17 @@
+---
+interface Props {
+  store: 'app' | 'play';
+  href: string;
+}
+
+const { store, href } = Astro.props;
+const icon = store === 'app' ? '/app-store.svg' : '/play-store.svg';
+const text = store === 'app' ? 'App Store' : 'Play Store';
+---
+
+<a href={href} class="bg-white text-[#030099] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+  <div class="flex items-center">
+    <img src={icon} alt={text} class="h-6 mr-2">
+    {text}
+  </div>
+</a>

@@ -1,0 +1,23 @@
+---
+import StoreButton from './ui/StoreButton.astro';
+import { STORE_LINKS } from '../utils/constants';
+---
+
+<section class="bg-gradient-to-br from-[#030099] to-blue-600 text-white">
+  <div class="container mx-auto px-6 py-20">
+    <div class="flex flex-col lg:flex-row items-center">
+      <div class="lg:w-1/2 mx-auto text-center lg:text-left" data-aos="fade-right">
+        <h1 class="text-5xl font-bold mb-6">
+          Manage Shared Transactions Effortlessly with Grupy
+        </h1>
+        <p class="text-xl mb-8">
+          Say goodbye to awkward money conversations. Split all bills instantly with friends and family using Grupy.
+        </p>
+        <div class="flex space-x-4 justify-center lg:justify-start">
+          <StoreButton store="app" href={STORE_LINKS.appStore} />
+          <StoreButton store="play" href={STORE_LINKS.playStore} />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+import SectionHeading from './ui/SectionHeading.astro';
+import StoreButton from './ui/StoreButton.astro';
+import { STORE_LINKS } from '../utils/constants';
+---
+
+<section class="bg-[#030099] text-white py-20">
+  <div class="container mx-auto px-6 text-center">
+    <SectionHeading 
+      text="Ready to Start Managing Shared Expenses?" 
+      class="text-white"
+    />
+    <p class="text-xl mb-12" data-aos="fade-up" data-aos-delay="100">
+      Download Grupy now and make group payments hassle-free!
+    </p>
+    <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+      <StoreButton store="app" href={STORE_LINKS.appStore} />
+      <StoreButton store="play" href={STORE_LINKS.playStore} />
+    </div>
+  </div>
+</section>

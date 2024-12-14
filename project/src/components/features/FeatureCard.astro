@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  delay?: number;
+}
+
+const { title, description, icon, delay = 0 } = Astro.props;
+---
+
+<div class="text-center" data-aos="fade-up" data-aos-delay={delay}>
+  <div class="bg-[#030099]/10 rounded-full p-6 w-20 h-20 mx-auto mb-6">
+    <Fragment set:html={icon} />
+  </div>
+  <h3 class="text-xl font-semibold mb-4">{title}</h3>
+  <p class="text-gray-600">{description}</p>
+</div>
